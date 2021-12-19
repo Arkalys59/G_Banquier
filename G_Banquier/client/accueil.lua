@@ -73,7 +73,6 @@ Citizen.CreateThread(function()
     while true do
         local wait = 900
         for k in pairs(pos) do
-            if ESX.PlayerData.job and ESX.PlayerData.job.name == 'banquier' then 
                 local coords = GetEntityCoords(GetPlayerPed(-1), false)
                 local dist = Vdist(coords.x, coords.y, coords.z, pos[k].x, pos[k].y, pos[k].z)
                 if dist <= 2.0 then
@@ -87,7 +86,6 @@ Citizen.CreateThread(function()
                         end
                     end
                 end
-            end
         Citizen.Wait(wait)
         end
     end
