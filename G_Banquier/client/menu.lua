@@ -4,8 +4,15 @@ Citizen.CreateThread(function()
     if ESX.IsPlayerLoaded() then ESX.PlayerData = ESX.GetPlayerData() end
 end)
 
-RegisterNetEvent('esx:playerLoaded') AddEventHandler('esx:playerLoaded', function(xPlayer) ESX.PlayerData = xPlayer end)
-RegisterNetEvent('esx:setJob') AddEventHandler('esx:setJob', function(job) ESX.PlayerData.job = job end)
+RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded', function(xPlayer)
+	ESX.PlayerData = xPlayer
+end)
+
+RegisterNetEvent('esx:setJob')
+AddEventHandler('esx:setJob', function(job)
+	ESX.PlayerData.job = job
+end)
  
 local menu = false 
 local mainMenu = RageUI.CreateMenu('Banquier', 'MENU')
